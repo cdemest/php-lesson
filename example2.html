@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  Συνάρτηση δημιουργός για το αντικείμενο myBook */
+        function myBook(author, publishingYear, numberOfPages) {
+            this.author = author;
+            this.publishingYear = publishingYear;
+            this.numberOfPages = numberOfPages;
+
+            this.displayAuthor = function displayAuthor() {
+                return this.author;
+            };
+
+            this.setName = function setName(newAuthor) {
+                this.author = newAuthor;
+            };
+
+            /* Ενσωμάτωση της μεθόδου displayAuthor στο αντικείμενο mybook */
+            /*
+            function displayAuthor() {
+                return this.author;
+            }
+            */
+        }
+        var myBook = new myBook("Vasilis", 2021, 120);
+        document.write("<h1>" + " The author of the myBook 2 is " + myBook.displayAuthor() + "</h1>");
+        myBook.setName("Kostas");
+        document.write("<h2>" + " The author of the myBook 2 is " + myBook.displayAuthor() + "</h2>");
+    </script>
+</body>
+
+</html>

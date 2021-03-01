@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <Script src="testscript.js" language="javascript"></script>
+</head>
+
+<body>
+    <!--body onload="myMessage2()"-->
+    <!--p>Ο κώδικας του myMessage2 βρίσκεται στο εξωτερικό αρχείο script.js</p-->
+    <script>
+        document.write("<h1> This is a test message </h1>");
+
+        /*  Συνάρτηση δημιουργός για το αντικείμενο myBook */
+        function myBook(author, publishingYear, numberOfPages) {
+            this.author = author;
+            this.publishingYear = publishingYear;
+            this.numberOfPages = numberOfPages;
+        }
+
+        var myBook = new myBook("Vasilis", 2021, 120);
+        document.write("<h1>" + " The publishing year of myBook is " + myBook.publishingYear + "</h1>");
+
+        var theBook = new Object();
+        theBook.author = "Papadiamantis";
+        theBook.publishingYear = 2019;
+        theBook.numberOfPages = 218;
+        document.write("<h1>" + " The author of theBook is " + theBook.publishingYear + "</h1>");
+    </script>
+</body>
+
+</html>
